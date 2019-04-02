@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Autenticarse</h1>
+        <form action="http://zatopek.zaffarano.com.ar:9096/login" method="POST">
+            <div class="form-group">
+                <label for="token">Token</label>
+                <textarea rows="8" class="form-control" name="token" placeholder="token">
+<?xml version="1.0"?>
+<sso version="2.0">
+    <id src="cn=Authserver, ou=DESEIN, o=AFIP, c=AR" dst="mattermost" unique_id="16325672" gen_time="1554040602" exp_time="1554040722" />
+    <operation type="login" value="granted">
+    <login service="mattermost" entity="33693450239" uid="sebas" authmethod="passphrase" regmethod="4">
+        <info name="departmentNumber" value="ABCDE00000" />
+        <info name="cn" value="Juan Perez" />
+        <info name="ou" value="Bla Bla" />
+        <info name="codigoLegajo" value="u99999" />
+        <info name="username" value="sebas" />
+        <info name="cuil" value="20111111112" />
+    </login>
+    </operation>
+</sso></textarea>
+            </div>
+            <div class="form-group">
+                <label for="sign">Sign</label>
+                <textarea rows="8" class="form-control" name="sign" placeholder="sign">
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
