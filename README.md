@@ -1,5 +1,7 @@
 # Oauth2 Provider para integrar authenticación de mattermost
 
+## Primeros pasos
+
 1. Crear estructura de directorios para estado de los contenedores
 
         ./setup.sh
@@ -20,3 +22,13 @@
       - Application Secret Key: ver en la configuración
       - GitLab Site URL: `http://<IP LOCAL>:9096`
 10. Salvar.  Hacer logout e ingresar con la opción de GitLab o desde `http://<IP LOCAL>:8080`
+
+## Pendientes
+
+- Integrar con viper y cobra para configuración y manejo de CLI
+- Analizar backend redis o RDBMS
+- Validar firma
+- Configurar con archivo yaml o json y agregar el resto de las opciones (timeouts, clave pública, etc)
+- Mejorar cómo se traslada el ticket desde el JWT en el método `/api/v4/user` (debería ser con assertions)
+- Integrar mattermost con oracle
+- Agregar lógica de backups
