@@ -9,12 +9,25 @@ type Config struct {
 		Secret string
 		Domain string
 	}
-	JWTKey                  []byte
-	GenerateRefresh         bool
-	AuthorizeCodeExpiration time.Duration
-	AccessTokenExpiration   time.Duration
-	RefreshTokenExpiration  time.Duration
 
-	MattermostURL string
-	SUAURL        string
+	Oauth struct {
+		JWTKey                  string
+		GenerateRefresh         bool
+		AuthorizeCodeExpiration time.Duration
+		AccessTokenExpiration   time.Duration
+		RefreshTokenExpiration  time.Duration
+	}
+
+	App struct {
+		Port          int32
+		MattermostURL string
+		SUAURL        string
+		PublicKey     string
+		Verbose       bool `yaml:"-"`
+	}
+}
+
+// Validate validates the configuration
+func (cfg Config) Validate() error {
+	return nil
 }

@@ -4,6 +4,10 @@ services:
     build: .
     read_only: true
     restart: unless-stopped
+    environment: 
+      GIN_MODE: release
+    volumes:
+      - ./oauth2-mm.yml:/oauth2-mm.yml:ro
     ports:
       - 9096:9096
 

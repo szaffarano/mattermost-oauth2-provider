@@ -45,7 +45,7 @@ func LoginHandler(srv *server.Server, cfg domain.Config) gin.HandlerFunc {
 		store.Set(loggedInUserID, token)
 		store.Save()
 
-		c.Header("Location", cfg.MattermostURL)
+		c.Header("Location", cfg.App.MattermostURL)
 		c.Status(http.StatusFound)
 	}
 }
@@ -75,7 +75,7 @@ func UserAuthorizationHandler(cfg domain.Config) func(http.ResponseWriter, *http
 				store.Delete(loggedInUserID)
 				store.Save()
 			} else {
-				w.Header().Set("Location", cfg.SUAURL)
+				w.Header().Set("Location", cfg.App.SUAURL)
 				w.WriteHeader(http.StatusFound)
 			}
 		}

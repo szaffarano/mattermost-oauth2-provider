@@ -6,7 +6,7 @@
 
         ./setup.sh
 2. Modificar el archivo `nginx/static/login.html` para que la URL apunte a la IP local
-3. Modificar configuración en `main.go` para adaptar a las URLs locales
+3. Modificar configuración en `oauth2-mm.yml` para adaptar a las URLs locales y demás parámetros
 4. Ejecutar `docker-compose`
 
         docker-compose build
@@ -25,10 +25,10 @@
 
 ## Pendientes
 
-- Integrar con viper y cobra para configuración y manejo de CLI
-- Analizar backend redis o RDBMS
 - Validar firma
-- Configurar con archivo yaml o json y agregar el resto de las opciones (timeouts, clave pública, etc)
 - Mejorar cómo se traslada el ticket desde el JWT en el método `/api/v4/user` (debería ser con assertions)
-- Integrar mattermost con oracle
 - Agregar lógica de backups
+- Integrar mattermost con oracle
+- Analizar backend redis o RDBMS
+- ~~Integrar con viper y cobra para configuración y manejo de CLI~~
+- ~~Configurar con archivo yaml o json y agregar el resto de las opciones (timeouts, clave pública, etc)~~

@@ -1,0 +1,17 @@
+client:
+  id: "222222"
+  secret: "1234567890123456789012345678901234567890"
+  domain: http://zatopek.zaffarano.com.ar
+
+oauth:
+  jwtkey: "1234567890"
+  generaterefresh: true
+  authorizecodeexpiration: 2m0s
+  accesstokenexpiration: 2h0m0s
+  refreshtokenexpiration: 72h0m0s
+
+app:
+  port: 9096
+  mattermosturl: http://zatopek.zaffarano.com.ar/oauth/gitlab/login
+  suaurl: http://localhost:8080
+  publickey: blabla

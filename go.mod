@@ -6,6 +6,9 @@ require (
 	github.com/gin-gonic/gin v1.3.0
 	github.com/go-session/session v3.1.2+incompatible
 	github.com/pkg/errors v0.8.1
+	github.com/spf13/cobra v0.0.3
+	github.com/spf13/viper v1.3.2
 	golang.org/x/net v0.0.0-20190403144856-b630fd6fe46b
 	gopkg.in/oauth2.v3 v3.9.5
+	gopkg.in/yaml.v2 v2.2.2
 )
